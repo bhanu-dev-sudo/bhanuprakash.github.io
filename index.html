@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhanu Prakash | Portfolio</title>
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4ff;
+        color: #333;
+      }
+
+      /* ── NAVBAR ── */
+      nav {
+        background-color: deeppink;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav h2 {
+        color: white;
+        font-size: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 15px;
+      }
+
+      nav a:hover { text-decoration: underline; }
+
+      /* ── HERO SECTION ── */
+      .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #fff0f6, #f0f4ff);
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        color: deeppink;
+        margin-bottom: 12px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 24px;
+      }
+
+      .hero .btn {
+        background-color: deeppink;
+        color: white;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .hero .btn:hover { background-color: hotpink; }
+
+      /* ── SKILLS SECTION ── */
+      .skills {
+        padding: 60px 32px;
+        text-align: center;
+        background: white;
+      }
+
+      .skills h2 {
+        color: deeppink;
+        font-size: 28px;
+        margin-bottom: 32px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .skill-card {
+        background: #f0f4ff;
+        border-radius: 12px;
+        padding: 24px 16px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #444;
+      }
+
+      .skill-card span {
+        display: block;
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+
+      /* ── CONTACT SECTION ── */
+      .contact {
+        padding: 60px 32px;
+        text-align: center;
+      }
+
+      .contact h2 {
+        color: deeppink;
+        font-size: 28px;
+        margin-bottom: 32px;
+      }
+
+      .contact-form {
+        max-width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+
+      .contact-form textarea { height: 100px; resize: none; }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: deeppink;
+        outline: none;
+      }
+
+      .contact-form .btn {
+        width: 100%;
+        background-color: deeppink;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .contact-form .btn:hover { background-color: hotpink; }
+
+      #successMsg {
+        display: none;
+        color: green;
+        font-weight: bold;
+        margin-top: 12px;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background-color: deeppink;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      /* ── RESPONSIVE — MOBILE ── */
+      @media (max-width: 600px) {
+        .hero h1 { font-size: 28px; }
+        .hero p  { font-size: 15px; }
+
+        nav {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skills, .contact { padding: 40px 16px; }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav>
+      <h2>Bhanu Prakash</h2>
+      <div>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Hi, I'm Bhanu Prakash 👋</h1>
+      <p>Aspiring Web Developer from Nellore, Andhra Pradesh</p>
+      <a href="#contact" class="btn">📬 Hire Me</a>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <h2>🛠️ My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><span>🌐</span>HTML</div>
+        <div class="skill-card"><span>🎨</span>CSS</div>
+        <div class="skill-card"><span>⚡</span>JavaScript</div>
+        <div class="skill-card"><span>📱</span>Responsive</div>
+        <div class="skill-card"><span>🔗</span>Git & GitHub</div>
+        <div class="skill-card"><span>⚛️</span>React Soon</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2>📬 Contact Me</h2>
+      <div class="contact-form">
+        <input type="text" id="name" placeholder="Your Name" />
+        <input type="email" id="email" placeholder="Your Email" />
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button class="btn" onclick="submitForm()">🚀 Send Message</button>
+        <div id="successMsg">✅ Thank you! I'll get back to you soon!</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Bhanu Prakash | Built with HTML, CSS & JavaScript ❤️</p>
+    </footer>
+
+    <script>
+      function submitForm() {
+        var name    = document.getElementById("name").value;
+        var email   = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name === "" || email === "" || message === "") {
+          alert("⚠️ Please fill all fields!");
+          return;
+        }
+
+        document.getElementById("successMsg").style.display = "block";
+        document.getElementById("name").value    = "";
+        document.getElementById("email").value   = "";
+        document.getElementById("message").value = "";
+      }
+    </script>
+
+  </body>
+</html>
